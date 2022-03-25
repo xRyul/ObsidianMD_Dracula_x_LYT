@@ -1,5 +1,14 @@
+/* 
+
+LYT Dracula 
+
++ With Dracula Blog Style Headings
++ With Dracula Codeblocks
+
+*/
+
 .theme-dark {
-    --background-primary: #23212d !important;
+    --background-primary: #22212c !important;
     --background-primary-alt: #23212d !important;
     --background-secondary: #15131f !important;
     --background-secondary-alt: #2a2442 !important;
@@ -19,46 +28,9 @@
     --interactive-accent-hover: #4d3ca6 !important;
 }
 
-/* Color for BOLD */
-/* Editing Mode */
+/* BOLD */
 .cm-strong, strong {
     color: #ffb86c !important;
-}
-
-/* Internal Link */
-/* Editing Mode */
-/* --text-accent: #ffb86c; */
-.cm-s-obsidian span.cm-link, .cm-s-obsidian span.cm-hmd-internal-link:hover {
-    color: #ff79c6 !important;
-    cursor: pointer !important;
-}
-
-/* Preview Mode */
-.markdown-preview-view .internal-link:hover {
-    color: #ff79c6 !important;
-    cursor: pointer !important;
-}
-
-/* External Link */
-/* Live View */
-.cm-link span.cm-underline,
-span.cm-url {
-    color: #50fa7b !important;
-}
-
-/* Preview Mode */
-div p a.external-link {
-    color: #50fa7b !important;
-}
-
-/* Add a pointer hand when on external links */
-.cm-s-obsidian span.cm-link:hover,
-.cm-s-obsidian span.cm-hmd-external-link:hover,
-.cm-link span.cm-underline:hover,
-span.cm-url:hover,
-.external-link:hover {
-    color: #50fa7b !important;
-    cursor: pointer !important;
 }
 
 /* Italics */
@@ -71,64 +43,483 @@ span.cm-url:hover,
     color: #506f80 !important;
 }
 
-/* Heading with External Link */
+/* Latex Color */
+/* pre code, mjx-math, span.cm-inline-code:not(.cm-formatting-code) {
+    color: #f8f8f2 !important;
+} */
+
+
+/* ---------------------------------------------------------------------*/
+/* ---------------- Internal Links - Live Preview & Source ------------*/
+/* ---------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------*/
+
+/* ------- Internal Link Color -------- */
+.theme-dark {
+    --md-color-link: #ff80b7 !important;
+}
+
+/* Source Mode */
+.cm-s-obsidian span.cm-hmd-internal-link:hover,
+.markdown-preview-view .internal-link:hover {
+    color: #e070a1 !important;
+    cursor: pointer !important;
+}
+
+/* Live Preview */
+span.cm-hmd-internal-link > span:hover {
+    color: #e070a1 !important;
+}
+
+.cm-header.cm-header-4cm-hmd-internal-link {
+    color: #e070a1 !important;
+}
+
+
+/* ---------------------------------------------------------------------*/
+/* ---------------- External Links - Live Preview & Source ------------*/
+/* ---------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------*/
+
+/* External Link */
+/* Live Preview */
+.cm-link span.cm-underline,
+span.cm-url {
+    color: #50fa7b !important;
+}
+
+/* External link text within the brackets e.g. link name etc */
+.cm-s-obsidian span.cm-link {
+    color: #50fa7b !important;
+}
+
+/* Preview Mode */
+div p a.external-link {
+    color: #50fa7b !important;
+}
+
+/* Add a pointer hand when on external links */
+.cm-s-obsidian span.cm-hmd-external-link:hover,
+.cm-link span.cm-underline:hover,
+span.cm-url:hover,
+.external-link:hover {
+    color: #50fa7b !important;
+    cursor: pointer !important;
+}
+
+/* ---------------------------------------------------------------------*/
+/* -------------- Header with External Links - Live Preview & Source ---*/
+/* ---------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------*/
+
+/* Header with External Link */
+/* Source Mode */
+.cm-header.cm-header.cm-link {
+    color: #ff5555 !important;
+}
+
+/* Source Mode URL color */
+.HyperMD-header.HyperMD-header-3.cm-line .cm-header.cm-header-3.cm-string.cm-url {
+    background: #50fa7b !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
+}
+
+
+/* Source Mode - Bracket Color in the headers*/
+.cm-formatting.cm-formatting-link-string.cm-header.cm-string.cm-url {
+    color: #ff5555 !important;
+}
+
 /*Live MODE*/
 .cm-header.cm-header.cm-link span.cm-underline {
     text-decoration: underline !important;
     color: #ff5555 !important;
 }
+
 /*Reading MODE*/
-.markdown-preview-view h1 a.external-link, .markdown-preview-view h2 a.external-link, .markdown-preview-view h3 a.external-link, .markdown-preview-view h4 a.external-link, .markdown-preview-view h5 a.external-link, .markdown-preview-view h6 a.external-link {
+.markdown-preview-view h1 a.external-link,
+.markdown-preview-view h2 a.external-link,
+.markdown-preview-view h3 a.external-link,
+.markdown-preview-view h4 a.external-link,
+.markdown-preview-view h5 a.external-link,
+.markdown-preview-view h6 a.external-link {
     text-decoration: underline !important;
     color: #ff5555 !important;
 }
 
-/* Hashtags */
-/* .cm-hashtag {
-    color:#f1fa8c !important
-} */
 
 /* Selection */
 .cm-selection {
-    background-color:#363948 !important
+    background-color:#36394800 !important
 }
 
-/*Code Blocks*/
-.theme-dark :not(pre) > code[class*="language-"], .theme-dark pre[class*="language-"], .cm-s-obsidian div.HyperMD-codeblock-bg {
-    background-color: #363843 !important;
+/* ---------------------------------------------------------------------*/
+/* ---------------- Codeblock - Live Preview & Source ------------------*/
+/* --------------------------- CM Tags ---------------------------------*/
+/* ------------------ Based on @deathau variables ----------------------*/
+/* ---------------------------------------------------------------------*/
+
+.theme-dark .HyperMD-codeblock {
+    background: #282a36 !important;
+    color: #f8f8f2;
+    font-family:'SF Mono', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    /* font-weight: 600 !important; */
+    /* white-space: pre; */
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    /* The default is 4, but you could change it if you really, really want to */
+    tab-size: 2;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
+  
+  /* Function, return, let, var */
+  .theme-dark .cm-keyword {
+    color: #ff80bf;
+    font-weight: normal;
+  }
+  
+  /* In css: var */
+  .theme-dark .cm-callee {
+    color:#ff80bf;
+  }
+  
+  /* E.g. color tag, sans-serif */
+  .theme-dark .cm-atom {
+    color: #9580ff;
+  }
+  
+  /* Function or var Name: e.g. Slayer in 'function Slayer' */
+  .theme-dark .cm-def {
+    color: #8aff80;
+  }
+  
+  /* Number or e.g. 1px, 1em*/
+  .theme-dark .cm-number {
+    color: #9580ff;
+  }
+  
+  /* In javasript: redner will be selected within ReactDOM.render */
+  /* In CSS selects whole elements: e.g. background-color, font-family etc */
+  .theme-dark .cm-property{
+    color: #80ffea;
+  }
+  
+  /* Var in css */
+  .theme-dark .cm-variable{
+    color: #80ffea;
+  }
+  
+  /* Var definition in css */
+  .theme-dark .cm-variable-2 {
+    color: #f8f8f2;
+  }
+  
+  /* Operators in javascript: = @ ! */
+  .theme-dark .cm-operator {
+    color:#ff80bf;
+  }
+  
+  /* IN css: e.g. .theme-dark or .theme-light */
+  .theme-dark .cm-qualifier {
+    color:#8aff80;
+    font-style: italic;
+  }
+  
+  /* In HTML: changes whole e.g. <html> <div> <div/> */
+  /* In css selects div e.g. in div.elements, or pre in 'not(pre)' */
+  /* ".cm-tag.cm-bracket" will change only </> bracket color */
+  /* In Editor it will change also "<b>, <u>" elements within text */
+  .theme-dark .cm-tag {
+    color:#ff80bf;
+  }
+  
+  /* In html "<!DOCTYPE html>" wil be highlighted */
+  /* .theme-dark .cm-meta {
+    color:red !important;
+  } */
+  
+  /* In html: attribute within e.g. <div=attribute></div> */
+  /* In BASH: will change options e.g. -l in `ls -l` */
+  .theme-dark .cm-attribute {
+    color:#8aff80;
+  }
+  
+  /* If '!important' is set, it will change the color of all comments */
+  .theme-dark .cm-comment {
+    color: #6272a4 !important;
+  }
+  
+  /* String e.g. a whole sentence within " Sample Sentece" */
+  .theme-dark .cm-string {
+    color:#ffff80;
+  }
+  
+  /* Some <div> elements were note selecting with simple .cm-string , but this .cm-string-2 fixes it */
+  .theme-dark .cm-string-2 {
+    color:#ff80bf;
+  }
+  
+  /* In bash it selects default commands e.g. cd, ls, grep, wc, find etc. */
+  .theme-dark .cm-builtin {
+    color:#80ffea;
+  }
+
+
+/* ------------------------------------------------------------*/
+/* ---------------- Codeblock - Reading Mode ------------------*/
+/* ----------------------- .token -----------------------------*/
+/* ------------------------------------------------------------*/
+
+/* Main Properties */
+.theme-dark code[class*="language-"],
+.theme-dark pre[class*="language-"] {
+    background: #282a36 !important;
+    color: #f8f8f2;
+    font-family:'SF Mono', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    /* font-weight: 600 !important; */
+    /* white-space: pre; */
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    /* The default is 4, but you could change it if you really, really want to */
+    tab-size: 2;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
+
+/* What the code looks like when highlighted */
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection,
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection {
+	background: rgba(146, 146, 175, 0.164); /* changes background color */
+	color: unset; /* changes color of the highlighted text */
 }
+
+/* Properties specific to code blocks */
+pre[class*="language-"] {
+	padding: 1em; /* this is standard */
+	margin: 0.5em 0; /* this is the default */
+	overflow: auto; /* this is standard */
+	border-radius: 5px; /* make codeblock edges round */
+}
+
+/**
+ * These are the minimum tokens you must style, you can rearrange them and/or style more tokens as you want
+ * The concepts behind these standard tokens, as well as some examples, can be found here: https://prismjs.com/tokens.html
+ */
+
+ /* Comment */
+.theme-dark .token.comment {
+    color: #6272a4;
+}
+/* In HTML e.g. <!DOCTYPE html> */
+.theme-dark .token.doctype {
+	color: #6272a4;
+}
+
+/* Punctuation such as brackets, parentheses, commas, and more.  */
+.theme-dark .token.punctuation {
+    color:#f8f8f2;
+}
+
+/* In BASH: color of the pipe | */
+/* In css color of = : ! * </> */
+/* .theme-dark .token.operator {
+	color: red;
+} */
+
+/* In html: attribute within e.g. <div=attribute></div> */
+.theme-dark .token.attr-name {
+	color: #8aff80;
+}
+
+/* String e.g. a whole sentence within " Sample Sentece" */
+.theme-dark .token.attr-value {
+	color: #ffff80;
+}
+
+/* In CSS: classname within 'class classname =' */
+/* In BASH: the first command will be also highlighted,
+   but can be overwritten with definition of '.token.builtin'
+   which is token responsible for bash built in cmds */
+.theme-dark .token.class-name {
+	color: #8aff80;
+}
+
+/* In bash it selects 'cd' , 'pwd' */
+/* '!important' to overwrite .token-class-name */
+.theme-dark .token.builtin {
+	color: #80ffea !important;
+}
+
+.theme-dark .language-bash .token.function {
+    color:#80ffea;
+}
+
+/* In JS: Function Name, println */
+/* In Bash: if you select !important it it willl overwrite following: ls, grep, wc . Better use
+'.language-bash.is-loaded .token.function' -> to target 'ls, grep, wc' */
+.theme-dark .token.function {
+	color: #50fa7b;
+}
+
+
+/* Boolean: true, false*/
+.theme-dark .token.boolean {
+	color: #9580ff;
+}
+
+/* Unknown */
+/* .theme-dark .token.constant {
+	color: red;
+} */
+
+/* Number */
+.theme-dark .token.number {
+    color: #9580ff;
+}
+
+/* Unit e.g. px, em */
+.theme-dark .token.unit {
+    color: #ff80bf;
+    /* font-weight: bold; */
+}
+
+/* In css: e.g. @font-family {} */
+.theme-dark .token.atrule {
+	color: #ff80bf;
+}
+
+/* e.g. var, let , const etc. */
+.theme-dark .token.keyword {
+    color: #ff80bf;
+    font-weight: normal;
+}
+
+/* In CSS: properties e.g. background-color in background-color: red*/
+.theme-dark .token.property {
+    color: #80ffea;
+}
+
+/* In html: div in <div></div> */
+.theme-dark .token.tag {
+	color: #ff80bf;
+}
+
+/* In HTML allows to change color of brackets  */
+/* .theme-dark .token.tag .punctuation {
+	color: #ff80bf;
+} */
+
+/* !important in css*/
+.theme-dark .token.important {
+	color: #ff80bf !important;
+}
+
+/* In css selects div e.g. in div.elements, or pre in 'not(pre)' */
+.theme-dark .token.selector {
+	color: #ff80bf;
+}
+/* Fixes some elements which .selector broke */
+/* Selects class in CSS */
+.theme-dark .token.class {
+    color: #8aff80;
+}
+
+/* String e.g. a whole sentence within " Sample Sentece" */
+.theme-dark .token.string {
+	color: #ffff80;
+}
+
+/* Method in Javscript e.g. render in ReactDOM.render*/
+.theme-dark .token.method {
+    color:#50fa7b;
+}
+
+/* Var in css e.g. --this-is-variable */
+.theme-dark .token.variable {
+	color: #9580ff;
+}
+
+/* In CSS: e.g. image path in background: url(pathtoimage.png) */
+.theme-dark .token.url {
+	color: #ffb86c;
+}
+
+/* The following rules are pretty similar across themes, but feel free to adjust them */
+/* The below are default in Obsidian */
+
+.theme-dark .token.bold {
+	font-weight:bolder;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.theme-dark .token.namespace {
+	opacity: 0.7;
+}
+
+
+/* LANGUAGE-SPECIFIC OVERRIDES */
+/* If you'd like your theme to have overrides for specific languages, here's an example, you can remove it and/or add more overrides */
+/* For Instance change -css to -javasript, for highlighting to work only on those languages */
+/* .theme-dark .language-css .token.important {
+	color: red;
+} */
+
+/* Inline Code in Reading Mode */
+p > code,
+li code,
+ul code,
+ol code {
+    font-family: "Monaco", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace !important;
+    line-height: normal;
+    background: #2f2f2d !important;
+    color: #ff5555 !important;
+    border-radius: 3px;
+    font-size: 85%;
+    padding: 0.2em 0.4em;
+    vertical-align: baseline;
+}
+
+/* Backticks of inline code */
+.cm-formatting.cm-formatting-code.cm-inline-code {
+    color:red !important;
+    padding: 0.2em 0.01em;
+}
+
+/* Inline Code in Source Mode */
+.cm-inline-code {
+    font-family: "Monaco", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace !important;
+    line-height: normal;
+    background: #2f2f2d !important;
+    color: #ff5555 !important;
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+    vertical-align: baseline;
+}
+
+
 
 :root {
     --default-font: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif !important;
+    --font-monospace: "Monaco", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace !important;
+    --font-code: "Monaco", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace !important;
+    --font-monospace-1: "Monaco", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace !important;
+    --font-monospace-2: "Monaco", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace !important;
 }
 
-/*Notion Style Inlinecode*/
-
-/*Code*/
-/*Inline code - Live Preview*/
-.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-    font-family: "Monaco", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace !important;
-    line-height: normal !important;
-    background: #87837826 !important;
-    color: #ff5555 !important;
-    border-radius: 3px !important;
-    font-size: 85% !important;
-    padding: 0.15em 0.4em !important;
-    vertical-align: baseline !important;
-}
-
-
-/*Inline code - Reader View*/
-.markdown-preview-view code {
-    font-family: "Monaco", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace !important;
-    line-height: normal !important;
-    background: #87837826 !important;
-    color: #ff5555 !important;
-    border-radius: 3px !important;
-    font-size: 85% !important;
-    padding: 0.2em 0.4em !important;
-    vertical-align: baseline !important;
-}
 
 /*Bullet list line height in Live Mode*/
 .ͼ1 .cm-scroller {
@@ -138,19 +529,6 @@ span.cm-url:hover,
 .markdown-preview-view {
     line-height: 1.7 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -506,7 +884,7 @@ Custom Icons
 
 /* Square-y Proportion */
 --font-sans-2:
-    'DM Sans', 'Inter', -apple-system
+    'Abril Text', 'Inter', -apple-system
     BlinkMacSystemFont, 'Segoe UI', 'Ubuntu',
     Helvetica, Arial, sans-serif;
 --font-monospace-2:
@@ -1104,7 +1482,7 @@ body .workspace-tab-header
 
 .nav-action-button {
     background: none;
-    height: var(--scale-2-18);
+    height: 16px;
     padding:    var(--scale-2-4)
                 var(--scale-2-4)
                 var(--scale-2-4)
@@ -1113,7 +1491,6 @@ body .workspace-tab-header
             var(--scale-2-2)
             var(--scale-0-0)
             var(--scale-2-2);
-    border-radius: var(--scale-2-4);
     opacity: 1;
 }
 
@@ -1122,36 +1499,6 @@ body .workspace-tab-header
 body .nav-action-button svg {
     height: var(--scale-8-2);
     width: var(--scale-8-2);
-}
-
-/*─────────Nav Header Buttons Color──────────*/
-
-.nav-action-button {
-    color:  var(--color-gray-60);
-    border: 1px solid transparent;
-}
-
-.nav-action-button.is-active,
-.nav-action-button.is-active:hover {
-    color: var(--color-cyan-500);
-    background-color: var(--color-gray-90); 
-    border: 1px solid var(--color-cyan-500);
-    border-radius: var(--scale-2-1);
-}
-
-.nav-action-button:not(.nav-action-button.is-active):hover {
-    /* color: var(--color-gray-20); */
-    color: var(--color-cyan-500);
-    background-color: var(--color-gray-90);
-    border: 1px solid var(--color-cyan-500);
-    border-radius: var(--scale-2-1);
-}
-
-.nav-action-button:not(.nav-action-button.is-active):active {
-    color: var(--color-gray-60);
-    background-color: var(--color-blacker);
-    border: 1px solid var(--color-gray-60);
-    border-radius: var(--scale-2-1);
 }
 
 /*────────────────────────────────────
@@ -1180,7 +1527,7 @@ body .nav-action-button svg {
 
 .nav-folder.mod-root > .nav-folder-title {
     font-size: var(--font-scale-0);
-    font-family: var(--font-code);
+    font-family: 'SF Pro Display';
     background: var(--background-secondary);
     top: 0;
     width: 100%;
@@ -1969,7 +2316,7 @@ Content / Active Note / Opened Notes
 .cm-header-1,
 .markdown-preview-view h1,
 .markdown-preview-view h1 code {
-    background: var(--color-yellow-gradient-1);
+    background: #ffb86c;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
@@ -1978,7 +2325,7 @@ Content / Active Note / Opened Notes
 .cm-header-2,
 .markdown-preview-view h2,
 .markdown-preview-view h2 code {
-    background: var(--color-purple-gradient-1);
+    background: #ff79c6;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
@@ -1987,7 +2334,7 @@ Content / Active Note / Opened Notes
 .cm-header-3,
 .markdown-preview-view h3,
 .markdown-preview-view h3 code {
-    background: var(--color-cyan-gradient-3);
+    background: #bd93f9;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
@@ -1996,7 +2343,7 @@ Content / Active Note / Opened Notes
 .cm-header-4,
 .markdown-preview-view h4,
 .markdown-preview-view h4 code {
-    background: var(--color-green-gradient-1);
+    background: #8be9fd;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -2004,7 +2351,7 @@ Content / Active Note / Opened Notes
 .cm-header-5,
 .markdown-preview-view h5,
 .markdown-preview-view h6 code {
-    background: var(--color-slate-gradient-1);
+    background: #50fa7b;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -2012,7 +2359,7 @@ Content / Active Note / Opened Notes
 .cm-header-6,
 .markdown-preview-view h6,
 .markdown-preview-view h6 code {
-    background: var(--color-slate-gradient-2);
+    background: #f1fa8c;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -2198,7 +2545,7 @@ a.internal-link.is-unresolved {
 
 /* Linked Header Colors */
 
-.cm-s-obsidian span.cm-header.cm-hmd-internal-link, /* Editor Internal Link */
+.cm-s-obsidian span.cm-header.cm-hmd-internal-link, /*Editor Internal Link*/
 .cm-s-obsidian span.cm-header.cm-link, /* Editor External Link */
 .markdown-preview-view h1 a.internal-link, 
 .markdown-preview-view h2 a.internal-link,
@@ -2213,11 +2560,13 @@ a.internal-link.is-unresolved {
 .markdown-preview-view h5 a.external-link,
 .markdown-preview-view h6 a.external-link {
     text-decoration: none;
-    color: var(--md-color-link);
+    /* color: #ff5555 !important; */
     background: none;
     -webkit-background-clip: initial;
     -webkit-text-fill-color: initial;
 }
+
+
 
 /*──────────Blockquotes──────────*/
 
@@ -2437,127 +2786,6 @@ ul.contains-task-list {
     margin-bottom: 0;
 }
 
-/*──────────Inline Code/Codeblocks──────────*/
-
-pre code[class*="language-"].is-loaded {
-    padding:    var(--scale-0-0)
-                var(--scale-0-0)
-                var(--scale-0-0)
-                var(--scale-0-0);
-}
-
-.cm-s-obsidian .cm-inline-code,
-.cm-s-obsidian .cm-hmd-codeblock,
-.cm-s-obsidian .cm-math,
-.cm-s-obsidian .cm-tag,
-div[data-tag-name="pre"] code,
-pre code,
-.markdown-preview-view code {
-    font-family: var(--font-code);
-}
-
-.cm-s-obsidian .cm-math {
-    font-size: 90%;
-}
-
-.cm-s-obsidian pre.HyperMD-codeblock.CodeMirror-line[role="presentation"],
-.cm-s-obsidian div.HyperMD-codeblock.cm-line,
-.cm-s-obsidian span.cm-inline-code:not(.cm-formatting-code),
-.markdown-preview-view code {
-    padding: 0 var(--scale-2-2);
-}
-
-code.is-loaded {
-    padding: 0 0;
-}
-
-.cm-s-obsidian span.cm-inline-code:not(.cm-formatting-code) {
-    border-radius: var(--scale-2-1);
-}
-
-.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
-    border-top-left-radius: var(--scale-2-1);
-    border-top-right-radius: var(--scale-2-1);
-}
-
-.cm-s-obsidian div.HyperMD-codeblock-end-bg {
-    border-bottom-left-radius: var(--scale-2-1);
-    border-bottom-right-radius: var(--scale-2-1);
-}
-
-.markdown-preview-view pre {
-    border-radius: var(--scale-2-1);
-}
-
-/* Inline Code / Codeblocks Syntax Highlighting */
-
-.cm-s-obsidian span.cm-bracket,
-.cm-s-obsidian span.cm-math,
-.cm-s-obsidian .cm-hmd-codeblock,
-.markdown-preview-view pre code.is-loaded,
-.markdown-preview-view pre code {
-    color: var(--md-color-code-gray);
-}
-
-.markdown-preview-view span.token.punctuation,
-.markdown-preview-view span.token.operator {
-    color: var(--md-color-code-slate);
-}
-
-.cm-s-obsidian span.cm-math.cm-variable-2,
-.cm-s-obsidian span.cm-keyword,
-.markdown-preview-view span.token.keyword,
-.markdown-preview-view span.token.tag {
-    color: var(--md-color-code-purple);
-}
-
-.cm-s-obsidian span.cm-error,
-.cm-s-obsidian span.cm-def,
-.cm-s-obsidian span.cm-attribute,
-.markdown-preview-view span.token.function,
-.markdown-preview-view span.token.parameter,
-.markdown-preview-view span.token.attr-name {
-    color: var(--md-color-code-magenta);
-}
-
-.cm-s-obsidian span.cm-tag,
-.cm-s-obsidian span.cm-property,
-.markdown-preview-view span.token.property,
-.markdown-preview-view span.token.property-access {
-    color: var(--md-color-code-yellow);
-}
-
-.cm-s-obsidian span.cm-number,
-.cm-s-obsidian span.cm-string:not(.cm-url),
-.markdown-preview-view span.token.string,
-.markdown-preview-view span.token.number {
-    color: var(--md-color-code-green);
-}
-
-.cm-s-obsidian span.cm-variable,
-.markdown-preview-view span.token.important,
-.markdown-preview-view code {
-    color: var(--md-color-code-white);
-}
-
-.cm-s-obsidian span.cm-variable-2,
-.markdown-preview-view span.token.class-name {
-    color: var(--md-color-code-cyan);
-}
-
-pre code,
-mjx-math,
-span.cm-inline-code:not(.cm-formatting-code) {
-    color: var(--md-color-code-white);
-}
-
-.markdown-source-view.mod-cm6 span.code-block-flair {
-    color: var(--md-color-code-white);
-    font-family: var(--font-code);
-    font-size: var(--font-scale-00);
-    padding: 0;
-    margin-top: var(--scale-2-1);
-}
 
 /*──────────Gutter Line Numbers──────────*/
 
