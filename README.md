@@ -8,9 +8,9 @@ A mix of LYT Mode (https://github.com/nickmilo/LYT-Mode) and Dracula (https://gi
 - Dracula Theme project created by Zeno Rocha (https://github.com/zenorocha/)
 
 ## Key features:
-+ Dracula Syntax Highlighting 
++ Dracula inspired Syntax Highlighting 
 <img src="https://github.com/xRyul/ObsidianMD_LYT_Dracula_Theme/blob/main/Images/Code_Highlighting_SourceMode.jpg" height="1080">
-+ Dracula Blog Style Headings
++ Dracula inspired Blog Style Headings
 <img src="https://github.com/xRyul/ObsidianMD_LYT_Dracula_Theme/blob/main/Images/Heading.jpg" width="506">
 
 ## How to install
