@@ -9,7 +9,7 @@ A mix of LYT Mode (https://github.com/nickmilo/LYT-Mode) and Dracula (https://gi
 
 ## Key features:
 + Dracula inspired Syntax Highlighting 
-<img src="https://github.com/xRyul/ObsidianMD_LYT_Dracula_Theme/blob/main/Images/Code_Highlighting_SourceMode.jpg" height="1080">
+<img src="https://github.com/xRyul/ObsidianMD_LYT_Dracula_Theme/blob/main/Images/Code_Highlighting_SourceMode.jpg" width="720">
 + Dracula inspired Blog Style Headings
 <img src="https://github.com/xRyul/ObsidianMD_LYT_Dracula_Theme/blob/main/Images/Heading.jpg" width="506">
 
