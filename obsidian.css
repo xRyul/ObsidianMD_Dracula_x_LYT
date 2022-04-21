@@ -1,10 +1,12 @@
 /* 
 
 LYT Dracula 
-0.2
+0.2.1
 
 + With Dracula Blog Style Headings
 + With Dracula Codeblocks
+
+2022-04-21 - Fixed text selection on heading and in code blocks 
 
 */
 
@@ -18,9 +20,9 @@ LYT Dracula
     --text-normal: #f8f8f2 !important;
     --text-muted: #6e6b7e !important; /*color of the file explorer font*/
     --text-faint: #6c6498 !important; /*color of the ribbon*/
-    --text-highlight-bg: rgba(255, 255, 0, 0.4) !important;
+    /* --text-highlight-bg: rgba(255, 255, 0, 0.4) !important; */
     --text-highlight-bg-active: rgba(54, 57, 72, 0.4) !important;
-    --text-selection: rgb(53 55 58 / 99%) !important;
+    --text-selection: #363948 !important;
     --text-on-accent: #f8f8f2 !important;
     --interactive-normal: #2a2a2a !important;
     --interactive-hover: #303030 !important;
@@ -40,8 +42,29 @@ LYT Dracula
 }
 
 /* Highlight */
-.cm-highlight {
-    color: #506f80 !important;
+.cm-s-obsidian span.cm-formatting-highligh,
+.cm-s-obsidian span.cm-highlight,
+.markdown-preview-view mark {
+    background: #fef3ac;
+    color: #262626;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Fix text selection on Headings */
+.markdown-source-view.mod-cm1 .cm-selection,
+.markdown-source-view.mod-cm2 .cm-selection,
+.markdown-source-view.mod-cm3 .cm-selection,
+.markdown-source-view.mod-cm4 .cm-selection,
+.markdown-source-view.mod-cm5 .cm-selection,
+.markdown-source-view.mod-cm6 .cm-selection {
+    background-color: initial;
+}
+
+
+/* FIx for text selection in codeblocks */
+.cm-hmd-codeblock .cm-selection {
+    background-color: #363948 !important;
 }
 
 /* Latex Color */
@@ -1991,53 +2014,40 @@ Content / Active Note / Opened Notes
 .cm-header-1,
 .markdown-preview-view h1,
 .markdown-preview-view h1 code {
-    background: #ffb86c;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
+    color: hsl(31, 100%, 71%);
+
 }
 
 .cm-header-2,
 .markdown-preview-view h2,
 .markdown-preview-view h2 code {
-    background: #ff79c6;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
+    color: hsl(326, 100%, 74%);
 }
 
 .cm-header-3,
 .markdown-preview-view h3,
 .markdown-preview-view h3 code {
-    background: #bd93f9;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
+    color: #bd93f9;
 }
 
 .cm-header-4,
 .markdown-preview-view h4,
 .markdown-preview-view h4 code {
-    background: #8be9fd;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #8be9fd;
 }
 
 .cm-header-5,
 .markdown-preview-view h5,
 .markdown-preview-view h6 code {
-    background: #50fa7b;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #50fa7b;
 }
 
 .cm-header-6,
 .markdown-preview-view h6,
 .markdown-preview-view h6 code {
-    background: #f1fa8c;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f1fa8c;
 }
+
 
 /*──────────Emphasis──────────*/
 
@@ -2077,7 +2087,7 @@ Content / Active Note / Opened Notes
 }
 
 /* Highlight */
-.cm-s-obsidian span.cm-highlight,
+/* .cm-s-obsidian span.cm-highlight,
 .markdown-preview-view mark {
     background: var(--md-color-highlight-bg);
     -webkit-background-clip: text;
@@ -2091,7 +2101,7 @@ Content / Active Note / Opened Notes
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(var(--color-highlight-shadow));
-}
+} */
 
 /* Comments */
 .cm-s-obsidian span.cm-comment {
