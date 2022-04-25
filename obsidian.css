@@ -61,9 +61,9 @@ LYT Dracula
     background-color: initial;
 }
 
-
-/* FIx for text selection in codeblocks */
-.cm-hmd-codeblock .cm-selection {
+/* FIx for text selection in codeblocks & quotes */
+.cm-hmd-codeblock .cm-selection,
+.cm-quote .cm-selection {
     background-color: #363948 !important;
 }
 
