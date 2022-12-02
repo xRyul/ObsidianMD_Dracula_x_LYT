@@ -4,7 +4,7 @@
 Theme for Obsidian MD.
 
 A mix of LYT Mode (https://github.com/nickmilo/LYT-Mode) and Dracula (https://github.com/dracula/obsidian).
-- LYT Mode originally comisisoned by nickmilo (https://github.com/nickmilo/) & designed by ceciliamay (https://github.com/ceciliamay)
+- LYT Mode originally comissioned by nickmilo (https://github.com/nickmilo/) & designed by ceciliamay (https://github.com/ceciliamay)
 - Dracula Theme project created by Zeno Rocha (https://github.com/zenorocha/)
 
 ## Key features:
